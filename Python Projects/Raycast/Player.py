@@ -3,7 +3,8 @@ import math
 from Settings import *
 
 class Player:
-    def __init__(self, x, y):
+    def __init__(self, x, y, game):
+        self.game = game
         self.x = x
         self.y = y
         self.width = 20
@@ -16,6 +17,27 @@ class Player:
         pg.draw.rect(display, green, [self.x, self.y, self.width, self.height])
 
     def move(self):
+
+        sin_a = math.sin(self.angle)
+        cos_a = math.cos(self.angle)
+        speed = PLAYER_SPEED * self.game.delta_time
+        speed_sin = speed * sin_a
+        speed_cos = speed * cos_a
+
+        keys = pg.key.get_pressed()
+        if keys[pg.K_UP]:
+            self.dx += speed_cos
+            self.dy += speed_sin
+        if keys[pg.K_DOWN]:
+            self.dx -= speed_cos
+            self.dy -= speed_sin
+
+        self.x += self.dx
+        self.y += self.dy
+
+        if keys[pg.K_LEFT]:
+            self.angle 
+
         for event in pg.event.get():
             if event.type == pg.KEYDOWN and event.key == pg.K_UP:
                 self.dy -= 1

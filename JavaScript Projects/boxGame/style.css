@@ -1,0 +1,39 @@
+body {
+    background-color: #3aafa9;
+    color: whitesmoke;
+    font-family: monospace;
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#container {
+    vertical-align:top;
+    width:45%;
+    display:inline-block;
+}
+#mycanvas {
+    background-image: url("images/Background.gif");
+    border: 20px solid red;
+}
+#scoredisplay {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+li {
+    /* vertical-align:top; */
+    text-align:left;
+    /* width:45%; */
+    display:block;
+}
+input[type="button"] {
+    width:75px;
+    height:25px;
+    font-size:15px;
+    color: red;
+    font-family:monospace;
+}
+.dropdown {
+    width:100px;
+    height:25px;
+    font-size:15px;
+    font-family:monospace;
+}
